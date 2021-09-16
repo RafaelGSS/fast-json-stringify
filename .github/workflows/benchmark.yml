@@ -36,6 +36,7 @@ jobs:
         id: benchmark-pr
         run: |
           npm run --silent benchmark > ./bench-result.md
+          result=$(cat ./bench-result)
           echo "::set-output name=BENCH_RESULT${{matrix.node-version}}::$result"
 
       # main benchmark
@@ -51,6 +52,7 @@ jobs:
         id: benchmark-master
         run: |
           npm run --silent benchmark > ./bench-result.md
+          result=$(cat ./bench-result)
           echo "::set-output name=BENCH_RESULT${{matrix.node-version}}::$result"
 
   output-benchmark:
