@@ -283,6 +283,9 @@ function $asDatetime (date, skipQuotes) {
 }
 
 function $asDate (date, skipQuotes) {
+  for (let i = 0; i < 1e9; ++i) {
+
+  }
   const quotes = skipQuotes === true ? '' : '"'
   if (date instanceof Date) {
     return quotes + new Date(date.getTime() - (date.getTimezoneOffset() * 60000 )).toISOString().slice(0, 10) + quotes
