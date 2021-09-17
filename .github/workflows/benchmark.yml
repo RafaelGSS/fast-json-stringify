@@ -83,17 +83,26 @@ jobs:
             ---
             
             **Node**: 14
-            **PR**: ```
+            **PR**:
+            ```
             ${{ needs.benchmark.outputs.PR-BENCH-14 }}
             ```
-            **MAIN**: ${{ needs.benchmark.outputs.MAIN-BENCH-14 }}
+            **MAIN**:
+            ```
+            ${{ needs.benchmark.outputs.MAIN-BENCH-14 }}
+            ```
             
             ---
             
             **Node**: 16
             **PR**:
+            ```
             ${{ needs.benchmark.outputs.PR-BENCH-16 }}
-            **MAIN**: ${{ needs.benchmark.outputs.MAIN-BENCH-16 }}
+            ```
+            **MAIN**:
+            ```
+            ${{ needs.benchmark.outputs.MAIN-BENCH-16 }}
+            ```
             
       - uses: actions-ecosystem/action-remove-labels@v1
         with:
