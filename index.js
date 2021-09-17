@@ -9,7 +9,7 @@ const fjsCloned = Symbol('fast-json-stringify.cloned')
 
 const validate = require('./schema-validator')
 let stringSimilarity = null
-
+// example
 let isLong
 try {
   isLong = require('long').isLong
